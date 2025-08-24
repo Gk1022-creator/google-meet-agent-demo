@@ -1,0 +1,88 @@
+/* Root container */
+.chat-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;   /* Full window height */
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fafafa;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Header */
+  header {
+    background: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+  }
+  
+  /* Controls */
+  .controls {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  /* Messages area */
+  .messages {
+    flex: 1;  /* Take all remaining space */
+    padding: 12px;
+    overflow-y: auto;
+  }
+  
+  /* Individual messages */
+  .msg {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+  }
+  .msg.user {
+    background: #d1e7dd;
+    align-self: flex-end;
+  }
+  .msg.assistant {
+    background: #f1f1f1;
+    align-self: flex-start;
+  }
+  .role {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #555;
+  }
+  .txt {
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+  
+  /* Composer */
+  .composer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+  }
+  .composer input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 8px;
+  }
+  .composer button {
+    padding: 8px 14px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .composer button:hover {
+    background: #357abd;
+  }
+  

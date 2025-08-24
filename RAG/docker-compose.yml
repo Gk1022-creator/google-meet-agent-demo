@@ -1,0 +1,16 @@
+
+version: '3.9'
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports: ['6333:6333','6334:6334']
+    volumes:
+      - ./qdrant_data:/qdrant/storage
+  backend:
+    build: ./backend
+    ports: ['8000:8000']
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - qdrant
+  # Ollama should run on the host machine; adjust OLLAMA_URL if run in docker.

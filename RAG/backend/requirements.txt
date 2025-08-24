@@ -1,0 +1,9 @@
+
+fastapi
+uvicorn[standard]
+qdrant-client
+requests
+pydantic
+sse-starlette
+python-dotenv
+openai

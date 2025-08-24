@@ -1,0 +1,16 @@
+qdrant:
+  url: "http://localhost:6333"
+  api_key: null
+  collection: "new-index-2"
+
+embeddings:
+  backend: "ollama"  # "ollama" or "sentence_transformers"
+  model: "nomic-embed-text"  # for ollama
+  st_model: "sentence-transformers/all-MiniLM-L6-v2"  # fallback (384 dims)
+
+chunking:
+  max_chars: 2000
+  overlap: 250
+
+ingestion:
+  default_source: "custom"
